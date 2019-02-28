@@ -21,7 +21,7 @@ describe('/Get order', () => {
 
 //Test /Post route
 describe('/POST order', () => {
-  it('post order', (done) => {
+  it('post orders', (done) => {
     const order = [{
       name: 'fruit',
       size: 'large',
