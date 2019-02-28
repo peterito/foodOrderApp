@@ -639,7 +639,7 @@ header{
 }
 /******UPLOAD BUTTON*/
 .meal-content-2 input[type="file"]{
-    margin-top: 10px;
+    margin-top: 20px;
     width: 100px;
 }
 .meal-content-2 input[type="submit"]{
@@ -647,7 +647,7 @@ header{
     background-color: #038876;
     height: 40px;
     border-radius: 100px;
-    width: 150px;
+    width: 100px;
 
 }
 meal-content-2 input[type="submit"]:hover{
