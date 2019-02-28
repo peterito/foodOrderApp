@@ -529,7 +529,7 @@ header{
 
 .text-input {
     display: block;
-    width: 100%;
+    width: 25%;
     height: 30px;
     padding: 6px 12px;
     margin-bottom: 10;
@@ -553,7 +553,7 @@ header{
 
 .select-input {
     display: block;
-    width: 100%;
+    width: 25%;
     height: 30px;
     padding: 6px 12px;
     margin-bottom: 10px;
