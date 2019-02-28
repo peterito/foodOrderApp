@@ -2,7 +2,7 @@ import express from 'express';
 // body parser to read the data
 import bodyParser from 'body-parser';
 import mealsRoute from './routes/meals.route';
-import menuRoute from './routes/menu.routes';
+import menuRoute from './routes/menus.route';
 import ordersRoute from './routes/orders.route';
 export default app;
 

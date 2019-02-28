@@ -1,28 +1,28 @@
-
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../app';
+
 chai.use(chaiHttp);
 const should = chai.should();
 
 // Test /Get route
-describe('/Get order', () => {
-    it('get orders', (done) => {
-     chai.request(app)
-     .get('/api/v1/orders')
-     .end((err, res) => {
+describe('/Get meals', () => {
+  it('get meals', (done) => {
+    chai.request(app)
+      .get('/api/v1/meals')
+      .end((err, res) => {
         res.should.have.property('status', 200);
         res.body.should.be.a('object');
         console.log(res.body);
         done();
-        });
-    });
+      });
+  });
 });
 
-//Test /Post route
-describe('/POST order', () => {
-  it('post order', (done) => {
-    const order = [{
+// Test /Post route
+describe('/POST meal', () => {
+  it('post meal', (done) => {
+    const meal = [{
       name: 'fruit',
       size: 'large',
       price: 500,
@@ -34,8 +34,8 @@ describe('/POST order', () => {
     },
     ];
     chai.request(app)
-      .post('/api/v1/orders')
-      .send(order)
+      .post('/api/v1/meals')
+      .send(meal)
       .end((err, res) => {
         res.should.have.property('status', 200);
         res.body.should.be.a('object');
@@ -45,11 +45,11 @@ describe('/POST order', () => {
   });
 });
 
-// // Test /Get:id route
-describe('/GET/:id order', () => {
-  it('get order by id', (done) => {
+// Test /Get:id route
+describe('/GET/:id meal', () => {
+  it('get meal by id', (done) => {
     chai.request(app)
-      .get(`/api/v1/orders/ ${3}`)
+      .get(`/api/v1/meals/ ${2}`)
       .end((err, res) => {
         res.should.have.property('status', 200);
         res.body.should.be.a('object');
@@ -59,17 +59,17 @@ describe('/GET/:id order', () => {
   });
 });
 
-// Update Order test
-describe('/PUT/:id order', () => {
-  it('update order by id', (done) => {
-    const order = {
+// Update meal test
+describe('/PUT/:id meal', () => {
+  it('update meal by id', (done) => {
+    const meal = {
       name: 'egg',
       size: 'small',
       price: 50,
     };
     chai.request(app)
-      .put(`/api/v1/orders/ ${3}`)
-      .send(order)
+      .put(`/api/v1/meals/ ${2}`)
+      .send(meal)
       .end((err, res) => {
         res.should.have.property('status', 200);
         res.body.should.be.a('object');
@@ -79,11 +79,11 @@ describe('/PUT/:id order', () => {
   });
 });
 
-// delete order test api
-describe('/DELETE/:id order', () => {
-  it('delete order by id', (done) => {
+// delete meal test
+describe('/DELETE/:id meal', () => {
+  it('delete meal by id', (done) => {
     chai.request(app)
-      .delete(`/api/v1/orders/ ${3}`)
+      .delete(`/api/v1/meals/ ${2}`)
       .end((err, res) => {
         res.should.have.property('status', 200);
         res.body.should.be.a('object');
@@ -92,4 +92,3 @@ describe('/DELETE/:id order', () => {
       });
   });
 });
-
