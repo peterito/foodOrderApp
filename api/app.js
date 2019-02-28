@@ -4,7 +4,6 @@ import bodyParser from 'body-parser';
 import mealsRoute from './routes/meals.route';
 import menuRoute from './routes/menus.route';
 import ordersRoute from './routes/orders.route';
-export default app;
 
 // instantiate expressjs
 const app = express();
@@ -22,3 +21,4 @@ app.listen(PORT, () => {
   console.log(`server running on port: ${PORT}`);
 });
 
+export default app;
