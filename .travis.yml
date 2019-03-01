@@ -8,8 +8,6 @@ before_install: cd ./api
 install:
   - npm install
 script:
-  - npm run lint
-  - npm run test:coveralls
   - npm run test
 
 notifications:
