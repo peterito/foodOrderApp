@@ -1,24 +1,27 @@
+
 import express from 'express';
-// body parser to read the data
+
+//body parser to read the data
 import bodyParser from 'body-parser';
 import mealsRoute from './routes/meals.route';
 import menuRoute from './routes/menus.route';
 import ordersRoute from './routes/orders.route';
 
-// instantiate expressjs
+//instantiate expressjs
 const app = express();
 const PORT = 8000;
 
 app.use(bodyParser.json());
 
-// creating the api version route
+//creating the api version route
 app.use('/api/v1/meals', mealsRoute);
 app.use('/api/v1/menus', menuRoute);
 app.use('/api/v1/orders', ordersRoute);
 
-// listening to our port
+//listening to our port
 app.listen(PORT, () => {
   console.log(`server running on port: ${PORT}`);
 });
 
 export default app;
+
