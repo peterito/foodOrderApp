@@ -1,1 +1,1 @@
-# foodOrderApp
+[![Coverage Status](https://coveralls.io/repos/github/peterito/foodOrderingApp/badge.svg?branch=develop)](https://coveralls.io/github/peterito/foodOrderingApp?branch=develop)
