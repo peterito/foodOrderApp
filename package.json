@@ -4,8 +4,10 @@
   "description": "simple meal booking api",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node app.js",
-    "test": "mocha --require @babel/register --exit || true",
+    "build": "babel -d ./api/build ./api/src -s",
+    "start": "node ./api/build/app.js",
+    "dev": "nodemon --exec babel-node api/src/app.js",
+    "test": "mocha --require @babel/register api/test/*.js --exit || true",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
@@ -24,11 +26,11 @@
   },
   "homepage": "https://github.com/peterito/foodOrderingApp#readme",
   "dependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.3",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
-    "babel-cli": "^6.26.0",
     "body-parser": "^1.18.3",
     "chai-http": "^4.2.1",
     "express": "^4.16.4",
