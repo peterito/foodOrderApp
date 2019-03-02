@@ -20,7 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //body parser to read the data
 //instantiate expressjs
 var app = (0, _express.default)();
-var PORT = 8000;
+var PORT = process.env.PORT || 8000;
 app.use(_bodyParser.default.json()); //creating the api version route
 
 app.use('/api/v1/meals', _meals.default);
