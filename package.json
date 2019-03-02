@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "babel -d ./api/build ./api/src -s",
-    "start": "node ./build/app.js",
+    "start": "node ./api/build/app.js",
     "dev": "nodemon --exec babel-node api/src/app.js",
     "test": "mocha --require @babel/register api/test/*.js --exit || true",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
