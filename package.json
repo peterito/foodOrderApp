@@ -4,8 +4,8 @@
   "description": "simple meal booking api",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node app.js",
-    "test": "mocha --require @babel/register --exit || true",
+    "start": "nodemon --exec babel-node api/app.js",
+    "test": "mocha --require @babel/register api/test/*.js --exit || true",
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
