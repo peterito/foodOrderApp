@@ -1,1 +1,1 @@
-web: node app.js
+web: cd node api/build/app.js
