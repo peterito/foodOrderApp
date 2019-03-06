@@ -1,7 +1,2 @@
-https://travis-ci.org/peterito/foodOrderingApp.svg?branch=master
+[![Build Status](https://travis-ci.org/peterito/foodOrderingApp.svg?branch=master)](https://travis-ci.org/peterito/foodOrderingApp)
 
-	https://img.shields.io/apm/l/:packageName.svg
-
-    https://img.shields.io/coveralls/:vcsType/:user/:repo.svg
-
-    https://img.shields.io/github/license/:user/:repo.svg
