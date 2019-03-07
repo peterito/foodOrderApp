@@ -4,7 +4,7 @@ TravisCI
 [![Coverage Status](https://coveralls.io/repos/github/peterito/foodOrderingApp/badge.svg?branch=master)](https://coveralls.io/github/peterito/foodOrderingApp?branch=master)
 
 
-Prerequisites
+💯Prerequisites❤
 The following tools will be needed to run this application successfully:
 
 Node v8.11.1 or above
