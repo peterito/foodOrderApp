@@ -1,4 +1,4 @@
-import MealModel from '../models/Meal.model';
+import MealModel from '../models/meal.model';
 import dummyData from '../utils/dummyData';
 
 
