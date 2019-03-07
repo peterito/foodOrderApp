@@ -14,8 +14,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var router = _express.default.Router(); // creating our routes
 
 
-router.get('/', _meal.default.fetchAllMeals);
-router.post('/', _meal.default.addMeal);
+router.get('/:id', _meal.default.fetchAllMeals);
+router.post('/id', _meal.default.addMeal);
 router.get('/:id', _meal.default.getSingleMeal);
 router.put('/:id', _meal.default.updateMeal);
 router.delete('/:id', _meal.default.deleteMeal);
