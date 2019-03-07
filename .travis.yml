@@ -8,6 +8,11 @@ install:
   - npm install
 script:
   - npm run test
+after_success:
+  - npm run coverage
+env:
+  global:
+    - 
 
 notifications:
   email: false

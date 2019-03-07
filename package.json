@@ -8,7 +8,11 @@
     "start": "node ./api/build/app.js",
     "dev": "nodemon --exec babel-node api/src/app.js",
     "test": "mocha --require @babel/register api/test/*.js --exit || true",
-    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "generate-lcov": "nyc report — reporter=text-lcov > lcov.info",
+    "coveralls-coverage": "coveralls < lcov.info",
+    "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
+    "coverage": "nyc npm test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage && npm install coveralls --save-dev && npm install mocha-lcov-reporter --save-dev"
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,7 @@
     "food",
     "order"
   ],
-  "author": "",
+  "author": "Peter Oyebamiji",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/peterito/foodOrderingApp/issues"
@@ -34,6 +38,7 @@
     "body-parser": "^1.18.3",
     "chai-http": "^4.2.1",
     "codeclimate-test-reporter": "^0.5.1",
+    "coveralls": "^3.0.3",
     "express": "^4.16.4",
     "mocha": "^6.0.2"
   },
